@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:08,000
+ChatSprint — a multilingual live quiz for Twitch communities
+
+2
+00:00:08,000 --> 00:00:24,000
+One desktop studio connects host controls, an OBS viewer preview, and Twitch chat.
+
+3
+00:00:24,000 --> 00:00:40,000
+Viewers answer inside Twitch with A, B, C, or D. ChatSprint listens through EventSub WebSockets.
+
+4
+00:00:40,000 --> 00:00:56,000
+Correct and wrong verdicts, scores, streaks, game totals, and the leaderboard update together.
+
+5
+00:00:56,000 --> 00:01:10,000
+Every viewer keeps a question-by-question answer history. The host can reset cleanly at any time.
+
+6
+00:01:10,000 --> 00:01:22,000
+The interface supports Bangla, English, Arabic, Dutch, and German, plus desktop and mobile layouts.
+
+7
+00:01:22,000 --> 00:01:38,000
+OpenAI Codex planned, built, tested, deployed, and debugged the live Twitch and OBS workflow with us.
+
+8
+00:01:38,000 --> 00:01:45,000
+ChatSprint turns passive viewers into active teammates — one fast answer at a time.

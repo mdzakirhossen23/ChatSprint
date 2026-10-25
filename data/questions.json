@@ -1,0 +1,292 @@
+[
+  {
+    "id": "0bade786-9481-4d46-84cf-ab3a9f0ad9f1",
+    "prompt": "বাংলাদেশের জাতীয় ফুল কোনটি? / What is Bangladesh's national flower?",
+    "options": {
+      "a": "গোলাপ / Rose",
+      "b": "শাপলা / Water lily",
+      "c": "সূর্যমুখী / Sunflower",
+      "d": "জবা / Hibiscus"
+    },
+    "translations": {
+      "bn": {
+        "prompt": "বাংলাদেশের জাতীয় ফুল কোনটি?",
+        "options": {
+          "a": "গোলাপ",
+          "b": "শাপলা",
+          "c": "সূর্যমুখী",
+          "d": "জবা"
+        }
+      },
+      "en": {
+        "prompt": "What is Bangladesh's national flower?",
+        "options": {
+          "a": "Rose",
+          "b": "Water lily",
+          "c": "Sunflower",
+          "d": "Hibiscus"
+        }
+      },
+      "ar": {
+        "prompt": "ما هي الزهرة الوطنية لبنغلاديش؟",
+        "options": {
+          "a": "الورد",
+          "b": "زنبق الماء",
+          "c": "عباد الشمس",
+          "d": "الكركديه"
+        }
+      },
+      "nl": {
+        "prompt": "Wat is de nationale bloem van Bangladesh?",
+        "options": {
+          "a": "Roos",
+          "b": "Waterlelie",
+          "c": "Zonnebloem",
+          "d": "Hibiscus"
+        }
+      },
+      "de": {
+        "prompt": "Was ist die Nationalblume von Bangladesch?",
+        "options": {
+          "a": "Rose",
+          "b": "Seerose",
+          "c": "Sonnenblume",
+          "d": "Hibiskus"
+        }
+      }
+    },
+    "correct": "b"
+  },
+  {
+    "id": "9483db7f-3d39-4427-ae08-5d20955e3d96",
+    "prompt": "Which planet is known as the Red Planet? / কোন গ্রহকে লাল গ্রহ বলা হয়?",
+    "options": {
+      "a": "Venus",
+      "b": "Jupiter",
+      "c": "Mars",
+      "d": "Mercury"
+    },
+    "translations": {
+      "bn": {
+        "prompt": "কোন গ্রহকে লাল গ্রহ বলা হয়?",
+        "options": {
+          "a": "শুক্র",
+          "b": "বৃহস্পতি",
+          "c": "মঙ্গল",
+          "d": "বুধ"
+        }
+      },
+      "en": {
+        "prompt": "Which planet is known as the Red Planet?",
+        "options": {
+          "a": "Venus",
+          "b": "Jupiter",
+          "c": "Mars",
+          "d": "Mercury"
+        }
+      },
+      "ar": {
+        "prompt": "أي كوكب يُعرف بالكوكب الأحمر؟",
+        "options": {
+          "a": "الزهرة",
+          "b": "المشتري",
+          "c": "المريخ",
+          "d": "عطارد"
+        }
+      },
+      "nl": {
+        "prompt": "Welke planeet staat bekend als de Rode Planeet?",
+        "options": {
+          "a": "Venus",
+          "b": "Jupiter",
+          "c": "Mars",
+          "d": "Mercurius"
+        }
+      },
+      "de": {
+        "prompt": "Welcher Planet ist als der Rote Planet bekannt?",
+        "options": {
+          "a": "Venus",
+          "b": "Jupiter",
+          "c": "Mars",
+          "d": "Merkur"
+        }
+      }
+    },
+    "correct": "c"
+  },
+  {
+    "id": "e6a52494-c080-43fd-91ed-8964fc716661",
+    "prompt": "বিশ্বের সবচেয়ে বড় মহাসাগর কোনটি? / Which is the largest ocean?",
+    "options": {
+      "a": "Pacific",
+      "b": "Atlantic",
+      "c": "Indian",
+      "d": "Arctic"
+    },
+    "translations": {
+      "bn": {
+        "prompt": "বিশ্বের সবচেয়ে বড় মহাসাগর কোনটি?",
+        "options": {
+          "a": "প্রশান্ত মহাসাগর",
+          "b": "আটলান্টিক মহাসাগর",
+          "c": "ভারত মহাসাগর",
+          "d": "উত্তর মহাসাগর"
+        }
+      },
+      "en": {
+        "prompt": "Which is the largest ocean?",
+        "options": {
+          "a": "Pacific Ocean",
+          "b": "Atlantic Ocean",
+          "c": "Indian Ocean",
+          "d": "Arctic Ocean"
+        }
+      },
+      "ar": {
+        "prompt": "ما هو أكبر محيط في العالم؟",
+        "options": {
+          "a": "المحيط الهادئ",
+          "b": "المحيط الأطلسي",
+          "c": "المحيط الهندي",
+          "d": "المحيط المتجمد الشمالي"
+        }
+      },
+      "nl": {
+        "prompt": "Wat is de grootste oceaan?",
+        "options": {
+          "a": "Stille Oceaan",
+          "b": "Atlantische Oceaan",
+          "c": "Indische Oceaan",
+          "d": "Noordelijke IJszee"
+        }
+      },
+      "de": {
+        "prompt": "Welcher ist der größte Ozean?",
+        "options": {
+          "a": "Pazifischer Ozean",
+          "b": "Atlantischer Ozean",
+          "c": "Indischer Ozean",
+          "d": "Arktischer Ozean"
+        }
+      }
+    },
+    "correct": "a"
+  },
+  {
+    "id": "fa9468d3-a4e7-4fcd-aef7-46596ba816b9",
+    "prompt": "How many bits are in one byte? / এক বাইটে কত বিট?",
+    "options": {
+      "a": "4",
+      "b": "8",
+      "c": "16",
+      "d": "32"
+    },
+    "translations": {
+      "bn": {
+        "prompt": "এক বাইটে কত বিট?",
+        "options": {
+          "a": "৪",
+          "b": "৮",
+          "c": "১৬",
+          "d": "৩২"
+        }
+      },
+      "en": {
+        "prompt": "How many bits are in one byte?",
+        "options": {
+          "a": "4",
+          "b": "8",
+          "c": "16",
+          "d": "32"
+        }
+      },
+      "ar": {
+        "prompt": "كم بتًا يوجد في البايت الواحد؟",
+        "options": {
+          "a": "٤",
+          "b": "٨",
+          "c": "١٦",
+          "d": "٣٢"
+        }
+      },
+      "nl": {
+        "prompt": "Hoeveel bits zitten er in één byte?",
+        "options": {
+          "a": "4",
+          "b": "8",
+          "c": "16",
+          "d": "32"
+        }
+      },
+      "de": {
+        "prompt": "Wie viele Bits hat ein Byte?",
+        "options": {
+          "a": "4",
+          "b": "8",
+          "c": "16",
+          "d": "32"
+        }
+      }
+    },
+    "correct": "b"
+  },
+  {
+    "id": "277cf36a-02e4-4db7-8a05-356ec0e7d025",
+    "prompt": "বাংলাদেশের স্বাধীনতা দিবস কবে? / When is Bangladesh Independence Day?",
+    "options": {
+      "a": "21 February",
+      "b": "16 December",
+      "c": "26 March",
+      "d": "14 April"
+    },
+    "translations": {
+      "bn": {
+        "prompt": "বাংলাদেশের স্বাধীনতা দিবস কবে?",
+        "options": {
+          "a": "২১ ফেব্রুয়ারি",
+          "b": "১৬ ডিসেম্বর",
+          "c": "২৬ মার্চ",
+          "d": "১৪ এপ্রিল"
+        }
+      },
+      "en": {
+        "prompt": "When is Bangladesh Independence Day?",
+        "options": {
+          "a": "21 February",
+          "b": "16 December",
+          "c": "26 March",
+          "d": "14 April"
+        }
+      },
+      "ar": {
+        "prompt": "متى يوافق يوم استقلال بنغلاديش؟",
+        "options": {
+          "a": "٢١ فبراير",
+          "b": "١٦ ديسمبر",
+          "c": "٢٦ مارس",
+          "d": "١٤ أبريل"
+        }
+      },
+      "nl": {
+        "prompt": "Wanneer is de Onafhankelijkheidsdag van Bangladesh?",
+        "options": {
+          "a": "21 februari",
+          "b": "16 december",
+          "c": "26 maart",
+          "d": "14 april"
+        }
+      },
+      "de": {
+        "prompt": "Wann ist der Unabhängigkeitstag von Bangladesch?",
+        "options": {
+          "a": "21. Februar",
+          "b": "16. Dezember",
+          "c": "26. März",
+          "d": "14. April"
+        }
+      }
+    },
+    "correct": "c"
+  }
+]

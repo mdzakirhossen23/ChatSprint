@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatSprint Overlay</title>
+    <link rel="icon" type="image/png" href="/chatsprint-logo.png">
+    <link rel="stylesheet" href="/style.css?v=20261025-answer-timer">
+  </head>
+  <body class="overlay-page">
+    <main class="overlay-wrap">
+      <div class="overlay-brand"><img src="/chatsprint-logo.png" alt="" width="38" height="38"><span>ChatSprint</span></div>
+      <section class="quiz-card overlay-panel">
+        <div class="eyebrow"><span id="state">READY</span><span id="answer-count">0 answers</span></div>
+        <h2 id="question">Waiting for the host…</h2>
+        <ol id="options" class="options"></ol>
+      </section>
+      <aside class="leaderboard-card overlay-board">
+        <div class="eyebrow"><span id="leaderboard-label">LEADERBOARD</span></div>
+        <ol id="leaderboard" class="leaderboard"></ol>
+      </aside>
+      <span id="connection" hidden></span><span id="toast" hidden></span>
+    </main>
+    <script type="module" src="/overlay.js?v=20261025-sidebar-language-fix"></script>
+  </body>
+</html>

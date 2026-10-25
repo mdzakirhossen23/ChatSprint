@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatSprint — Streamer Control Room</title>
+    <link rel="icon" type="image/png" href="/chatsprint-logo.png">
+  <link rel="stylesheet" href="/style.css?v=20261025-dock-timers-toggle">
+  </head>
+  <body class="desktop-app">
+    <section id="app-window" class="app-window window-normal" aria-label="ChatSprint desktop application">
+      <div class="app-titlebar">
+        <div class="app-title"><img src="/chatsprint-logo.png" alt=""><strong>ChatSprint</strong><span id="window-mode-label">Normal</span></div>
+        <nav class="language-switcher titlebar-languages" aria-label="Language">
+          <button type="button" class="language-button" data-lang="bn">বাংলা</button>
+          <button type="button" class="language-button" data-lang="en">English</button>
+          <button type="button" class="language-button" data-lang="ar">العربية</button>
+          <button type="button" class="language-button" data-lang="nl">Nederlands</button>
+          <button type="button" class="language-button" data-lang="de">Deutsch</button>
+        </nav>
+        <div class="window-readout"><span id="app-size-label">App size</span><output id="app-size">0 × 0</output></div>
+        <button id="twitch-dock-open" class="twitch-dock-toggle" type="button" aria-expanded="false" aria-controls="obs-test-dock twitch-dock"><span>◉</span><b id="twitch-dock-open-label">Twitch test</b></button>
+        <div class="window-controls" role="group" aria-label="Window controls">
+          <button id="window-normal" type="button" title="Normal size"><span>❐</span><b id="window-normal-label">Normal</b></button>
+          <button id="window-max" type="button" title="Maximize"><span>□</span><b id="window-max-label">Max</b></button>
+          <button id="window-close" class="window-close" type="button" title="Close"><span>×</span><b id="window-close-label">Close</b></button>
+        </div>
+      </div>
+    <div class="desktop-layout">
+      <aside class="desktop-sidebar">
+        <div class="desktop-brand"><span class="logo"><img src="/chatsprint-logo.png" alt="ChatSprint logo"></span><div><strong>ChatSprint</strong><small>Desktop Studio</small></div></div>
+        <nav class="desktop-nav" aria-label="Workspace">
+          <button class="desktop-nav-button setup-nav active" type="button" data-view="setup" aria-current="page"><span>▶</span><span id="nav-setup">Go Live</span></button>
+          <button class="desktop-nav-button" type="button" data-view="studio"><span>◉</span><span id="nav-studio">Live Studio</span></button>
+          <button class="desktop-nav-button" type="button" data-view="broadcast"><span>▣</span><span id="nav-broadcast">OBS Broadcast</span></button>
+          <button class="desktop-nav-button" type="button" data-view="questions"><span>?</span><span id="nav-questions">Question Bank</span></button>
+          <button class="desktop-nav-button" type="button" data-view="about"><span>i</span><span id="nav-about">About the app</span></button>
+        </nav>
+        <div class="sidebar-footer"><span id="sidebar-connection" class="connection">Starting…</span><a class="compare-link" href="/compare">Side-by-side test ↗</a></div>
+      </aside>
+    <main class="shell desktop-main">
+      <header>
+        <div class="brand"><span class="logo"><img src="/chatsprint-logo.png" alt="ChatSprint logo" width="52" height="52"></span><div><h1>ChatSprint</h1><p>Chat thinks fast. Community wins together.</p></div></div>
+        <div class="header-tools">
+          <div class="header-status">
+            <a id="compare-link" class="compare-link" href="/compare">Side-by-side view</a>
+            <button id="why-open" class="why-button" type="button" aria-expanded="false" aria-controls="why-panel">Why use ChatSprint?</button>
+            <div id="connection" class="connection">Starting…</div>
+          </div>
+        </div>
+      </header>
+      <section class="desktop-view setup-view desktop-panel active" data-view-panel="setup">
+        <div class="setup-heading">
+          <div><span id="setup-kicker" class="tag">GO LIVE ASSISTANT</span><h2 id="setup-title">Go live without guessing</h2><p id="setup-intro">Follow the four buttons in order. A camera is not required.</p></div>
+          <span id="setup-ready-badge" class="setup-ready-badge">Checking…</span>
+        </div>
+        <div id="setup-next-action" class="setup-next-action" aria-live="polite">
+          <span id="setup-next-arrow">➜</span>
+          <div><small id="setup-next-label">NEXT ACTION</small><strong id="setup-next-title">Press the red “Copy URL” button</strong><p id="setup-next-help">After you press it, ChatSprint will automatically show the next button.</p></div>
+          <button id="setup-guide-reset" type="button">Start again</button>
+        </div>
+        <div class="setup-body">
+          <div class="setup-steps">
+            <article class="setup-step" data-setup-step="overlay">
+              <span class="setup-step-number">1</span>
+              <div><h3 id="setup-step1-title">Copy the OBS browser URL</h3><p id="setup-step1-text">In OBS choose Sources → + → Browser, paste this URL, set 1920 × 1080 and press OK.</p><div class="setup-url-row"><input id="setup-overlay-url" type="text" readonly value="https://chattprint.baharsoftbd.com/overlay"><button id="setup-copy-overlay" class="primary" type="button">Copy URL</button><a id="setup-preview-overlay" href="/overlay" target="_blank">Preview ↗</a></div></div>
+            </article>
+            <article class="setup-step" data-setup-step="twitch">
+              <span class="setup-step-number">2</span>
+              <div><h3 id="setup-step2-title">Open Twitch Stream Manager</h3><p id="setup-step2-text">Keep the dashboard open to check whether the channel is online. ChatSprint already works without a camera.</p><a id="setup-open-dashboard" class="setup-action" href="https://dashboard.twitch.tv/u/chatsprintzakir/stream-manager" target="_blank">Open Twitch dashboard ↗</a></div>
+            </article>
+            <article class="setup-step" data-setup-step="stream">
+              <span class="setup-step-number">3</span>
+              <div><h3 id="setup-step3-title">Start OBS and go live</h3><p id="setup-step3-text">ChatSprint launches OBS in the background with the saved overlay, scene and Twitch profile.</p><div class="setup-live-controls"><a id="setup-start-live" class="primary" href="chatsprintobs://start">▶ Start live</a><a id="setup-stop-live" href="chatsprintobs://stop">■ Stop live</a><a id="setup-obs-status" href="chatsprintobs://status">Check OBS</a><a id="setup-install-companion" href="/downloads/ChatSprintObsCompanion.exe" download>Install companion</a></div><label class="setup-confirm"><input id="setup-obs-confirm" type="checkbox"><span id="setup-obs-confirm-label">OBS Companion is ready</span></label></div>
+            </article>
+            <article class="setup-step" data-setup-step="test">
+              <span class="setup-step-number">4</span>
+              <div><h3 id="setup-step4-title">Test viewer video and chat</h3><p id="setup-step4-text">The test opens ChatSprint, the OBS viewer screen and Twitch chat together.</p><div class="setup-actions"><button id="setup-open-test" class="primary" type="button">Open live test</button><button id="setup-open-studio" type="button">Open control room</button></div></div>
+            </article>
+          </div>
+          <aside class="setup-checklist">
+            <span id="setup-check-title" class="tag">AUTOMATIC CHECK</span>
+            <h3 id="setup-check-heading">Before going live</h3>
+            <ul>
+              <li id="setup-check-overlay"><span>✓</span><div><b id="setup-check-overlay-title">OBS overlay</b><small id="setup-check-overlay-state">Checking…</small></div></li>
+              <li id="setup-check-questions"><span>✓</span><div><b id="setup-check-questions-title">Questions</b><small id="setup-check-questions-state">Checking…</small></div></li>
+              <li id="setup-check-chat"><span>✓</span><div><b id="setup-check-chat-title">Twitch chat</b><small id="setup-check-chat-state">Checking…</small></div></li>
+              <li id="setup-check-camera" class="ready"><span>✓</span><div><b id="setup-check-camera-title">Camera</b><small id="setup-check-camera-state">Not required</small></div></li>
+            </ul>
+            <p id="setup-help-note">If the Twitch player says Offline, start streaming in OBS and wait a few seconds.</p>
+          </aside>
+        </div>
+      </section>
+      <section id="why-panel" class="why-panel desktop-view" data-view-panel="about" hidden>
+        <div class="why-heading"><div><span class="tag">WHY CHATSPRINT</span><h2>Turn viewers into active participants</h2></div><button id="why-close" type="button" aria-label="Close">×</button></div>
+        <p id="why-intro">ChatSprint makes a livestream more interactive, easier to follow and more rewarding for the community.</p>
+        <div id="why-benefits" class="benefit-grid"></div>
+        <p id="why-audience" class="why-audience"></p>
+      </section>
+      <section class="desktop-view" data-view-panel="studio" hidden>
+      <div class="studio-grid">
+      <article class="desktop-panel control-workspace">
+      <div class="desktop-section-heading"><div><span id="control-kicker" class="tag">HOST CONTROL</span><h3 id="control-title">Streamer Control Room</h3></div><span class="desktop-section-number">1</span></div>
+      <section class="hero">
+        <div class="quiz-card">
+          <div class="eyebrow quiz-summary-head">
+            <span id="state">READY</span>
+            <div id="quiz-stats" class="quiz-stats" aria-label="Game totals">
+              <span class="stat-question"><small id="stat-question-label">Question</small><strong id="stat-question">0/0</strong></span>
+              <span class="stat-answer"><small id="stat-answer-label">Answers</small><strong id="stat-answer">0</strong></span>
+              <span class="stat-unanswered"><small id="stat-unanswered-label">No answer</small><strong id="stat-unanswered">0</strong></span>
+              <span class="stat-correct"><small id="stat-correct-label">Correct</small><strong id="stat-correct">0</strong></span>
+              <span class="stat-wrong"><small id="stat-wrong-label">Wrong</small><strong id="stat-wrong">0</strong></span>
+            </div>
+          </div>
+          <h2 id="question">Loading…</h2>
+          <ol id="options" class="options"></ol>
+          <div class="control-flow" aria-label="Game control order">
+            <span id="flow-start" data-flow-step="start">১ প্রশ্ন চালু</span>
+            <i aria-hidden="true">→</i>
+            <span id="flow-answer" data-flow-step="answer">২ দর্শকের উত্তর</span>
+            <i aria-hidden="true">→</i>
+            <span id="flow-reveal" data-flow-step="reveal">৩ ফল দেখান</span>
+            <i aria-hidden="true">→</i>
+            <span id="flow-next" data-flow-step="next">৪ পরের প্রশ্ন</span>
+          </div>
+          <div id="control-guide" class="control-guide" aria-live="polite">
+            <span id="control-guide-badge">ধাপ ১</span>
+            <div><strong id="control-guide-title">প্রথমে প্রশ্ন চালু করুন</strong><small id="control-guide-help">নিচের উজ্জ্বল বাটনটি চাপুন।</small></div>
+          </div>
+          <div class="controls">
+            <button id="next" class="primary">Next question</button>
+            <button id="close">Reveal answer</button>
+            <button id="reset" class="quiet" title="Start a completely new game">Reset game</button>
+          </div>
+          <div class="answer-timer" aria-label="Automatic quiz timers">
+            <div class="timer-row">
+              <label class="answer-timer-duration"><span id="answer-timer-label">Answer time</span><input id="answer-timer-seconds" type="number" min="5" max="300" step="5" value="30"><small id="answer-timer-unit">seconds</small></label>
+              <label class="answer-timer-toggle"><input id="answer-timer-enabled" type="checkbox" checked><span id="answer-timer-auto-label">Auto reveal</span></label>
+              <output id="answer-timer-countdown" aria-live="polite">Waiting for question</output>
+            </div>
+            <div class="timer-row">
+              <label class="answer-timer-duration"><span id="next-timer-label">Next question delay</span><input id="next-timer-seconds" type="number" min="3" max="300" step="1" value="10"><small id="next-timer-unit">seconds</small></label>
+              <label class="answer-timer-toggle"><input id="next-timer-enabled" type="checkbox" checked><span id="next-timer-auto-label">Auto next</span></label>
+              <output id="next-timer-countdown" aria-live="polite">Waiting for result</output>
+            </div>
+          </div>
+        </div>
+        <aside class="leaderboard-card">
+          <div class="eyebrow"><span id="top-players-label">TOP PLAYERS</span><a id="overlay-link" href="/overlay" target="_blank">Open OBS overlay ↗</a></div>
+          <ol id="leaderboard" class="leaderboard"></ol>
+        </aside>
+      </section>
+      </article>
+      <article class="desktop-panel chat-workspace">
+        <div class="desktop-section-heading"><div><span id="chat-kicker" class="tag">VIEWER TEST</span><h3 id="chat-title">Twitch Chat</h3></div><span class="desktop-section-number">2</span></div>
+        <div class="chat-window desktop-chat-window">
+          <div class="chat-heading"><span class="chat-live-dot"></span><strong id="chat-room-label">LIVE CHAT</strong><small>#chatsprint</small></div>
+          <div id="chat-messages" class="chat-messages"><p id="chat-hint">Choose an answer below. It will appear here like a Twitch chat message.</p></div>
+          <form id="studio-chat-form" class="chat-form">
+            <label><span id="studio-viewer-name-label">Viewer name</span><input id="studio-chat-name" name="name" value="TestViewer" maxlength="25" required></label>
+            <div id="chat-answer-buttons" class="chat-answer-buttons" role="group" aria-label="Chat answer"><button type="submit" value="!a">!a</button><button type="submit" value="!b">!b</button><button type="submit" value="!c">!c</button><button type="submit" value="!d">!d</button></div>
+          </form>
+          <div id="chat-result" class="chat-result" aria-live="polite"></div>
+        </div>
+      </article>
+      </div>
+      </section>
+      <section class="desktop-view" data-view-panel="broadcast" hidden>
+        <article class="desktop-panel broadcast-workspace">
+          <div class="desktop-section-heading"><div><span id="broadcast-kicker" class="tag">BROADCAST OUTPUT</span><h3 id="broadcast-title">OBS Broadcast Overlay</h3><p id="broadcast-description">This is the live view your audience will see in OBS.</p></div><a id="broadcast-open" class="primary-link" href="/overlay" target="_blank">Open full overlay ↗</a></div>
+          <div class="obs-browser"><div class="obs-browser-bar"><span></span><span></span><span></span><code>https://chattprint.baharsoftbd.com/overlay</code></div><iframe class="obs-frame" src="/overlay" title="OBS Broadcast Overlay"></iframe></div>
+        </article>
+      </section>
+      <section class="question-manager desktop-view desktop-panel" data-view-panel="questions" hidden>
+        <div class="question-manager-head">
+          <div><span id="question-bank-tag" class="tag">QUESTION BANK</span><h3 id="question-bank-title">Manage questions</h3><p id="question-bank-note">The game resets itself and the question language is detected automatically from the text.</p></div>
+          <button id="add-question" class="primary" type="button">+ Add question</button>
+        </div>
+        <label class="question-search"><span id="question-search-label">Search questions</span><input id="question-search" type="search" placeholder="Search by question or answer…"></label>
+        <div id="question-list" class="question-list"></div>
+      </section>
+      <dialog id="question-dialog" class="question-dialog">
+        <form id="question-form" method="dialog">
+          <div class="question-dialog-head"><div><span id="question-form-tag" class="tag">QUESTION EDITOR</span><h3 id="question-form-title">Add question</h3></div><button id="question-dialog-close" type="button" aria-label="Close">×</button></div>
+          <p id="question-language-note" class="question-language-note">No language switch is needed—the language used in the question and answers is detected automatically.</p>
+          <label class="wide"><span id="question-prompt-label">Question</span><textarea name="prompt" maxlength="300" required></textarea></label>
+          <div class="question-option-grid">
+            <label><span>Answer A</span><input name="a" maxlength="180" required></label>
+            <label><span>Answer B</span><input name="b" maxlength="180" required></label>
+            <label><span>Answer C</span><input name="c" maxlength="180" required></label>
+            <label><span>Answer D</span><input name="d" maxlength="180" required></label>
+          </div>
+          <label><span id="correct-answer-label">Correct answer</span><select name="correct"><option value="a">A</option><option value="b">B</option><option value="c">C</option><option value="d">D</option></select></label>
+          <div class="question-form-actions"><button id="question-cancel" class="quiet" type="button">Cancel</button><button id="question-save" class="primary" type="submit">Save question</button></div>
+        </form>
+      </dialog>
+      <section class="demo-card desktop-legacy-demo" hidden>
+        <div><span id="demo-mode-label" class="tag">DEMO MODE</span><h3 id="demo-title">Test a chat answer</h3><p id="demo-description">No Twitch account is needed for this test.</p></div>
+        <form id="demo-form">
+          <label><span id="viewer-name-label">Viewer name</span><input name="name" value="ZakirViewer" maxlength="25" required></label>
+          <label><span id="chat-answer-label">Chat answer</span><select name="answer"><option>!a</option><option>!b</option><option>!c</option><option>!d</option></select></label>
+          <button id="send-answer" class="primary">Send answer</button>
+        </form>
+      </section>
+      <div id="toast" class="toast"></div>
+    </main>
+    </div>
+    <footer class="app-footer">
+      <span id="footer-copy">© 2026 ChatSprint · All rights reserved</span>
+      <span id="footer-status">Live quiz studio</span>
+    </footer>
+    <button id="window-resize-grip" class="window-resize-grip" type="button" aria-label="Drag to resize the app" title="Drag to resize the app"></button>
+    </section>
+    <aside id="obs-test-dock" class="obs-test-dock" aria-label="OBS broadcast preview" hidden>
+      <div class="obs-test-dock-bar">
+        <div><span class="obs-live-dot"></span><strong id="obs-test-dock-title">OBS Broadcast</strong><small id="obs-test-dock-caption">Viewer screen</small></div>
+        <a id="obs-test-open-full" href="/overlay" target="_blank" title="Open full OBS overlay" aria-label="Open full OBS overlay">↗</a>
+      </div>
+      <iframe id="obs-test-frame" class="obs-test-frame" title="OBS broadcast preview"></iframe>
+    </aside>
+    <aside id="twitch-dock" class="twitch-dock" aria-label="Twitch testing browser" hidden>
+      <div class="twitch-dock-bar">
+        <div><span class="twitch-live-dot"></span><strong id="twitch-dock-title">Twitch test browser</strong><small>twitch.tv/chatsprintzakir</small></div>
+        <button id="twitch-dock-close" type="button" aria-label="Close Twitch test browser" title="Close Twitch test browser">×</button>
+      </div>
+      <div class="twitch-question-strip" aria-live="polite">
+        <strong id="twitch-current-question">বর্তমান প্রশ্ন</strong>
+        <small id="twitch-answer-help">Twitch চ্যাটে a, b, c, d অথবা !a, !b, !c, !d লিখে উত্তর দিন।</small>
+      </div>
+      <iframe id="twitch-player-frame" class="twitch-player-frame" title="ChatSprint Twitch player" allowfullscreen></iframe>
+      <iframe id="twitch-chat-frame" class="twitch-chat-frame" title="ChatSprint Twitch chat"></iframe>
+    </aside>
+    <div id="app-closed" class="app-closed" hidden><img src="/chatsprint-logo.png" alt=""><h1>ChatSprint</h1><p id="app-closed-message">The app window is closed.</p><button id="window-reopen" class="primary" type="button">Open ChatSprint</button></div>
+<script type="module" src="/app.js?v=20261025-dock-timers-toggle"></script>
+  </body>
+</html>

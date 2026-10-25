@@ -1,0 +1,18 @@
+{
+  "name": "chatsprint",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Twitch-connected live quiz with automatic scoring and an OBS-ready leaderboard.",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

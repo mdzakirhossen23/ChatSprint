@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatSprint — Side-by-side view</title>
+    <link rel="icon" type="image/png" href="/chatsprint-logo.png">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="compare-page">
+    <main class="compare-shell">
+      <header class="compare-header">
+        <div class="compare-intro">
+          <span id="compare-tag" class="tag">TWO CONNECTED VIEWS</span>
+          <h1 id="compare-title">Understand both views side by side</h1>
+          <p id="compare-description">The host controls the quiz on the left. Viewers see the live broadcast overlay on the right. Both update together.</p>
+        </div>
+        <div class="compare-actions">
+          <nav class="language-switcher" aria-label="Language">
+            <button type="button" class="language-button" data-lang="bn">বাংলা</button>
+            <button type="button" class="language-button" data-lang="en">English</button>
+            <button type="button" class="language-button" data-lang="ar">العربية</button>
+            <button type="button" class="language-button" data-lang="nl">Nederlands</button>
+            <button type="button" class="language-button" data-lang="de">Deutsch</button>
+          </nav>
+          <a id="compare-back" class="compare-back" href="/">← Back to control room</a>
+        </div>
+      </header>
+      <section class="view-grid">
+        <article class="view-card">
+          <div class="view-card-head">
+            <span class="view-number">1</span>
+            <div><h2 id="host-title">Streamer Control Room</h2><p id="host-description">The host starts questions, reveals answers, resets the game and tests chat replies.</p><span id="host-badge" class="view-badge">HOST VIEW</span></div>
+          </div>
+          <div class="live-frame host-preview">
+            <div class="preview-top"><div class="preview-brand"><img src="/chatsprint-logo.png" alt=""><strong>ChatSprint</strong></div><span id="preview-status">READY</span></div>
+            <div class="preview-columns">
+              <div class="preview-quiz"><div class="preview-meta"><span id="host-state">READY</span><span id="host-count">0 answers</span></div><h3 id="host-question">Loading…</h3><ol id="host-options" class="preview-options"></ol><div class="preview-controls"><button id="preview-next" class="primary" type="button">Next question</button><button id="preview-close" type="button">Reveal answer</button><button id="preview-reset" class="quiet" type="button">Reset game</button></div></div>
+              <aside class="preview-board"><strong id="host-board-label">TOP PLAYERS</strong><ol id="host-leaderboard" class="preview-leaderboard"></ol></aside>
+            </div>
+          </div>
+        </article>
+        <article class="view-card">
+          <div class="view-card-head">
+            <span class="view-number">2</span>
+            <div><h2 id="chat-title">Twitch Chat</h2><p id="chat-description">Viewers answer with !a, !b, !c or !d. Test the complete flow here.</p><span id="chat-badge" class="view-badge">VIEWER ANSWER</span></div>
+          </div>
+          <div class="live-frame chat-preview">
+            <div class="chat-window">
+              <div class="chat-heading"><span class="chat-live-dot"></span><strong id="chat-room-label">LIVE CHAT</strong><small>#chatsprint</small></div>
+              <div id="chat-messages" class="chat-messages"><p id="chat-hint">Choose an answer below. It will appear here like a Twitch chat message.</p></div>
+              <form id="compare-chat-form" class="chat-form">
+                <label><span id="chat-name-label">Viewer name</span><input id="compare-chat-name" name="name" value="TestViewer" maxlength="25" required></label>
+                <div id="chat-answer-buttons" class="chat-answer-buttons" role="group" aria-label="Chat answer">
+                  <button type="submit" name="answer" value="!a">!a</button><button type="submit" name="answer" value="!b">!b</button><button type="submit" name="answer" value="!c">!c</button><button type="submit" name="answer" value="!d">!d</button>
+                </div>
+              </form>
+              <div id="chat-result" class="chat-result" aria-live="polite"></div>
+            </div>
+          </div>
+        </article>
+        <article class="view-card">
+          <div class="view-card-head">
+            <span class="view-number">3</span>
+            <div><h2 id="audience-title">OBS Broadcast Overlay</h2><p id="audience-description">Viewers see the question, answers and leaderboard live inside the broadcast.</p><span id="audience-badge" class="view-badge">AUDIENCE VIEW</span></div>
+          </div>
+          <div class="live-frame audience-preview">
+            <div class="preview-brand"><img src="/chatsprint-logo.png" alt=""><strong>ChatSprint</strong></div>
+            <div class="audience-stage"><div class="preview-quiz"><div class="preview-meta"><span id="audience-state">READY</span><span id="audience-count">0 answers</span></div><h3 id="audience-question">Loading…</h3><ol id="audience-options" class="preview-options"></ol></div><aside class="preview-board"><strong id="audience-board-label">LEADERBOARD</strong><ol id="audience-leaderboard" class="preview-leaderboard"></ol></aside></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="/compare.js"></script>
+  </body>
+</html>
